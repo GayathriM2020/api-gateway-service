@@ -18,8 +18,8 @@ spring:
               filters:
                 - name: RequestRateLimiter
                   args:
-                    redis-rate-limiter.replenishRate: 2   # 5 requests per second
-                    redis-rate-limiter.burstCapacity: 2  # max burst of 10
+                    redis-rate-limiter.replenishRate: 2   # 2 requests per second
+                    redis-rate-limiter.burstCapacity: 4  # max burst of 4
                 - name: CircuitBreaker
                   args:
                     name: userServiceCB
